@@ -58,6 +58,8 @@
   font-style: normal;
 }
 
+/*----------General Options start----------*/
+
 *,
 *::before,
 *::after {
@@ -65,6 +67,26 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
 }
 
 a {
@@ -86,7 +108,8 @@ h6 {
   font-size: inherit;
 }
 
-image {
+img {
+  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -98,7 +121,8 @@ image {
   font-size: 20px;
   color: rgba(226, 226, 226, 1);
 }
-/*----------------------------------------*/
+
+/*----------General Options end----------*/
 
 .wrapper {
   width: 100%;
@@ -106,6 +130,7 @@ image {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
 }
+/*----------Header start----------*/
 
 /*
   max-width: 1240px;
@@ -166,9 +191,9 @@ image {
   color: rgba(14, 14, 14, 1);
 }
 
-@media (max-width: 999px) {
+@media (max-width: 1024px) {
   .wrapper {
-    padding: 0 10px;
+    padding: 0 20px;
   }
 }
 
@@ -195,11 +220,12 @@ image {
   }
   .header__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 40px 0;
   }
+
   .header__menu {
     display: none;
   }
@@ -207,3 +233,83 @@ image {
     display: none;
   }
 }
+
+/*----------Header end----------*/
+
+/*----------Main__content-main start----------*/
+
+.main__content-main {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  row-gap: 30px;
+}
+
+.main__title {
+  max-width: 750px;
+  margin: 0;
+  font-family: "Nunito-ExtraBold";
+  font-size: 64px;
+  line-height: 100%;
+}
+
+.main__text {
+  max-width: 770px;
+  font-family: "Nunito-Regular";
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.main__button {
+  width: 201px;
+  height: 48px;
+  border-radius: 24px;
+  font-family: "Quicksand-Bold";
+  font-size: 16px;
+  line-height: 120%;
+  box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
+}
+
+.main__button:hover {
+  animation: bounce 1s;
+}
+
+.main__image img {
+  padding-top: 30px;
+}
+
+@media (max-width: 767px) {
+  .main__title {
+    font-size: 50px;
+  }
+  .main__text {
+    font-size: 17px;
+    line-height: 130%;
+  }
+  .main__button {
+    width: 160px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main__content-main {
+    row-gap: 20px;
+  }
+  .main__title {
+    font-size: 28px;
+  }
+  .main__text {
+    font-size: 12px;
+    line-height: 126%;
+  }
+  .main__button {
+    width: 146px;
+  }
+  .main__image img {
+    padding-top: 10px;
+  }
+}
+
+/*----------Main__content-main end----------*/
+
+/*----------Main__content-about start----------*/
