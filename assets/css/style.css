@@ -98,6 +98,7 @@ image {
   font-size: 20px;
   color: rgba(226, 226, 226, 1);
 }
+/*----------------------------------------*/
 
 .wrapper {
   width: 100%;
@@ -105,66 +106,18 @@ image {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
 }
-/*--------------------------------------------*/
 
-@media (max-width: 1440px) {
-  .wrapper {
-    padding: 0 100px;
-  }
-  ._container {
-    max-width: 1240px;
-    margin: 0px auto;
-  }
+/*
+  max-width: 1240px;
+  margin: 0px auto;
+*/
 
-  .header__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 72px 0;
-  }
-}
-
-@media (max-width: 899px) {
-  .wrapper {
-    padding: 0 10px;
-  }
-}
-
-@media (max-width: 767px) {
-  .wrapper {
-    padding: 0 40px;
-  }
-  .header__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 40px 0;
-  }
-  .header__menu {
-    display: none;
-  }
-}
-
-@media (max-width: 390px) {
-  .wrapper {
-    width: auto;
-    padding: 0 25px;
-  }
-  .header__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 40px 0;
-  }
-  .header__menu {
-    display: none;
-  }
-  .header__button {
-    display: none;
-  }
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 72px 0;
 }
 
 .header__logo {
@@ -211,4 +164,46 @@ image {
 .header__button:hover {
   background-color: white;
   color: rgba(14, 14, 14, 1);
+}
+
+@media (max-width: 999px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 0 40px;
+  }
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+  }
+  .header__menu {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    width: auto;
+    padding: 0 25px;
+  }
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__button {
+    display: none;
+  }
 }
