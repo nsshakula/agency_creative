@@ -1,0 +1,214 @@
+@font-face {
+  font-family: "Quicksand-Regular";
+  src: url("../fonts/Quicksand-Regular.eot");
+  src: url("../fonts/Quicksand-Regular.woff") format("woff"),
+    url("../fonts/Quicksand-Regular.ttf") format("truetype"),
+    url("../fonts/Quicksand-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand-SemiBold";
+  src: url("../fonts/Quicksand-SemiBold.eot");
+  src: url("../fonts/Quicksand-SemiBold.woff") format("woff"),
+    url("../fonts/Quicksand-SemiBold.ttf") format("truetype"),
+    url("../fonts/Quicksand-SemiBold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand-Bold";
+  src: url("../fonts/Quicksand-Bold.eot");
+  src: url("../fonts/Quicksand-Bold.woff") format("woff"),
+    url("../fonts/Quicksand-Bold.ttf") format("truetype"),
+    url("../fonts/Quicksand-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-Regular";
+  src: url("../fonts/Nunito-Regular.eot");
+  src: url("../fonts/Nunito-Regular.woff") format("woff"),
+    url("../fonts/Nunito-Regular.ttf") format("truetype"),
+    url("../fonts/Nunito-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("../fonts/Nunito-Bold.eot");
+  src: url("../fonts/Nunito-Bold.woff") format("woff"),
+    url("../fonts/Nunito-Bold.ttf") format("truetype"),
+    url("../fonts/Nunito-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-ExtraBold";
+  src: url("../fonts/Nunito-ExtraBold.eot");
+  src: url("../fonts/Nunito-ExtraBold.woff") format("woff"),
+    url("../fonts/Nunito-ExtraBold.ttf") format("truetype"),
+    url("../fonts/Nunito-ExtraBold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+image {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-container {
+  min-height: 100%;
+  background-color: rgba(14, 14, 14, 1);
+  font-family: "Quicksand-Regular";
+  font-size: 20px;
+  color: rgba(226, 226, 226, 1);
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 100px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+/*--------------------------------------------*/
+
+@media (max-width: 1440px) {
+  .wrapper {
+    padding: 0 100px;
+  }
+  ._container {
+    max-width: 1240px;
+    margin: 0px auto;
+  }
+
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 72px 0;
+  }
+}
+
+@media (max-width: 899px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 0 40px;
+  }
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+  }
+  .header__menu {
+    display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .wrapper {
+    width: auto;
+    padding: 0 25px;
+  }
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__button {
+    display: none;
+  }
+}
+
+.header__logo {
+  background-image: url(../image/svg/logo.svg);
+  height: 50px;
+  width: 136px;
+}
+
+.menu__list {
+  width: 385px;
+  text-align: center;
+}
+
+.menu__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__link {
+  color: rgba(226, 226, 226, 1);
+  font-family: "Quicksand-Regular";
+  font-size: 18px;
+  line-height: 107%;
+}
+
+._link-activ {
+  font-family: "Quicksand-Bold";
+  font-size: 18px;
+  line-height: 107%;
+}
+
+.header__button {
+  width: 185px;
+  height: 48px;
+  border: 1px solid #e2e2e2;
+  border-radius: 24px;
+  background-color: transparent;
+  color: rgba(226, 226, 226, 1);
+  font-family: "Quicksand-Bold";
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.header__button:hover {
+  background-color: white;
+  color: rgba(14, 14, 14, 1);
+}
