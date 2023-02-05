@@ -58,7 +58,7 @@
   font-style: normal;
 }
 
-/*----------General Options start----------*/
+/*--General Options start--*/
 
 *,
 *::before,
@@ -116,13 +116,15 @@ img {
 
 .page-container {
   min-height: 100%;
+  min-width: 250px;
   background-color: rgba(14, 14, 14, 1);
   font-family: "Quicksand-Regular";
+  font-weight: 400;
   font-size: 20px;
   color: rgba(226, 226, 226, 1);
 }
 
-/*----------General Options end----------*/
+/*--General Options end--*/
 
 .wrapper {
   width: 100%;
@@ -130,12 +132,7 @@ img {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
 }
-/*----------Header start----------*/
-
-/*
-  max-width: 1240px;
-  margin: 0px auto;
-*/
+/*--Header start--*/
 
 .header__container {
   display: flex;
@@ -163,15 +160,14 @@ img {
 
 .menu__link {
   color: rgba(226, 226, 226, 1);
-  font-family: "Quicksand-Regular";
   font-size: 18px;
   line-height: 107%;
 }
 
-._link-activ {
+.menu__link-activ {
   font-family: "Quicksand-Bold";
-  font-size: 18px;
-  line-height: 107%;
+  font-weight: 700;
+  line-height: 133%;
 }
 
 .header__button {
@@ -225,7 +221,6 @@ img {
     flex-wrap: wrap;
     margin: 40px 0;
   }
-
   .header__menu {
     display: none;
   }
@@ -234,18 +229,18 @@ img {
   }
 }
 
-/*----------Header end----------*/
+/*--Header end--*/
 
-/*----------Main__content-main start----------*/
+/*--Main__blok start--*/
 
-.main__content-main {
+.main__content {
   display: grid;
   justify-items: center;
   text-align: center;
   row-gap: 30px;
 }
 
-.main__title {
+.main-blok__title {
   max-width: 750px;
   margin: 0;
   font-family: "Nunito-ExtraBold";
@@ -253,63 +248,236 @@ img {
   line-height: 100%;
 }
 
-.main__text {
+.main-blok__text {
   max-width: 770px;
   font-family: "Nunito-Regular";
-  font-size: 20px;
   line-height: 150%;
+  opacity: 0.6;
 }
 
-.main__button {
+.main-blok__button {
   width: 201px;
   height: 48px;
   border-radius: 24px;
   font-family: "Quicksand-Bold";
+  font-weight: 700;
   font-size: 16px;
   line-height: 120%;
   box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
 }
 
-.main__button:hover {
+.main-blok__button:hover {
   animation: bounce 1s;
 }
 
-.main__image img {
+.main-blok__image img {
   padding-top: 30px;
 }
 
 @media (max-width: 767px) {
-  .main__title {
+  .main-blok__title {
     font-size: 50px;
   }
-  .main__text {
+  .main-blok__text {
     font-size: 17px;
     line-height: 130%;
   }
-  .main__button {
+  .main-blok__button {
     width: 160px;
   }
 }
 
 @media (max-width: 500px) {
-  .main__content-main {
+  .main__content {
     row-gap: 20px;
   }
-  .main__title {
+  .main-blok__title {
     font-size: 28px;
   }
-  .main__text {
+  .main-blok__text {
     font-size: 12px;
     line-height: 126%;
   }
-  .main__button {
+  .main-blok__button {
     width: 146px;
   }
-  .main__image img {
+  .main-blok__image img {
     padding-top: 10px;
   }
 }
 
-/*----------Main__content-main end----------*/
+/*--Main__blok end--*/
 
-/*----------Main__content-about start----------*/
+/*--Main__team start--*/
+
+.main__team {
+  display: grid;
+  justify-items: center;
+}
+
+.team__title {
+  font-family: "Quicksand-SemiBold";
+  font-size: 24px;
+  line-height: 80%;
+  padding-top: 155px;
+}
+
+.team__subtitle {
+  font-family: "Nunito-Bold";
+  font-size: 55px;
+  line-height: 100%;
+  padding-top: 20px;
+}
+
+.team__wrapper {
+  display: grid;
+  grid-template-areas:
+    "image text"
+    "image buttons";
+  grid-column-gap: 65px;
+  padding-top: 40px;
+}
+
+.team__text {
+  grid-area: text;
+  display: grid;
+  max-width: 610px;
+  gap: 24px;
+  align-items: end;
+  text-align: justify;
+  min-height: 128px;
+  line-height: 160%;
+  padding-bottom: 24px;
+}
+
+.team__buttons {
+  grid-area: buttons;
+}
+
+.team__button-white {
+  width: 172px;
+  height: 48px;
+  border-radius: 24px;
+  font-family: "Quicksand";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 0 25px 0 0;
+  box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
+}
+
+.team__button-black {
+  width: 210px;
+  height: 48px;
+  border: 1px solid #e2e2e2;
+  border-radius: 24px;
+  background-color: transparent;
+  color: rgba(226, 226, 226, 1);
+  font-family: "Quicksand-Bold";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.team__image {
+  grid-area: image;
+  max-width: 565px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+@media (max-width: 1439px) {
+  .team__wrapper {
+    grid-template-areas:
+      "text"
+      "buttons"
+      "image";
+    grid-row-gap: 35px;
+    justify-items: center;
+  }
+  .team__text {
+    grid-area: text;
+    max-width: 770px;
+  }
+  .team__buttons {
+    grid-area: buttons;
+  }
+  .team__image {
+    grid-area: image;
+    max-width: 770px;
+    width: 100%;
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .team__title {
+    font-size: 20px;
+    line-height: 100%;
+    padding-top: 120px;
+  }
+  .team__subtitle {
+    font-size: 40px;
+  }
+  .team__text {
+    font-size: 17px;
+    line-height: 130%;
+  }
+  .team__button-white {
+    width: 140px;
+  }
+  .team__button-black {
+    width: 180px;
+  }
+}
+
+@media (max-width: 500px) {
+  .team__wrapper {
+    padding-top: 20px;
+    max-width: 371px;
+  }
+  .team__title {
+    font-size: 14px;
+    padding-top: 96px;
+  }
+  .team__subtitle {
+    font-size: 24px;
+    padding-top: 10px;
+  }
+  .team__text {
+    font-size: 14px;
+    line-height: 137%;
+    padding-top: 5px;
+    gap: 10px;
+    padding-bottom: 0;
+  }
+  .team__button-white {
+    width: 140px;
+    font-size: 12px;
+    line-height: 120%;
+  }
+  .team__button-black {
+    width: 180px;
+    font-size: 12px;
+    line-height: 120%;
+  }
+  .team__image {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 401px) {
+  .team__wrapper {
+    grid-row-gap: 20px;
+  }
+  .team__buttons {
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+  }
+  .team__button-white {
+    margin: 0;
+  }
+}
+
+/*--Main__team end--*/
