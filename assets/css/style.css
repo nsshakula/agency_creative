@@ -149,13 +149,9 @@ img {
 }
 
 .menu__list {
-  width: 385px;
-  text-align: center;
-}
-
-.menu__item {
   display: flex;
   justify-content: space-between;
+  width: 385px;
 }
 
 .menu__link {
